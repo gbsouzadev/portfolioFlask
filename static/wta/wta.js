@@ -19,7 +19,11 @@ let weather = {
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"
     },
     search: function () {
-        this.fetchWeather(document.querySelector(".search-bar").value);
+        let tmpName = document.querySelector(".search-bar").value;
+        if (tmpName.charAt(tmpName.length-1) == " ") {
+            tmpName = tmpName.slice(0, -1);
+        };
+        this.fetchWeather(tmpName);
     },
 };
 
