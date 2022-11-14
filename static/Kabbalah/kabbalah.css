@@ -1,0 +1,203 @@
+/* Size for brand */
+
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.manual {
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
+.nameCardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+    row-gap: 10px;
+}
+.nameCardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1px;
+}
+.nameCardItemFr {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 30px;
+}
+
+.numberCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.numberCardItem {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.numberCardItemFrK {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 200px;
+}
+.numberCardItemFrR {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 40px;
+}
+.listCardItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+}
+.listCardItemFrK {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 240px;
+}
+.listCardItemFrR {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 240px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.listCardItemFrNgK {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 240px;
+}
+.listCardItemFrNgR {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 240px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.lcCardItem {
+    direction: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.lcCardTitle {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 240px;
+}
+.lcCardInnerContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.lcCardIndex{
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 45px;
+}
+.lcCardFrquency{
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 40px;
+}
+.lcCardDuration {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 158px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.clCardFrquency {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 200px;
+}
+.piramidrow {
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+
+
+
+
+
+.arcaneCardItem {
+    direction: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.arcaneCardTitle {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 240px;
+}
+.arcaneCardInnerContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.arcaneCardKey{
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 160px;
+}
+.arcaneCardValue {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4px;
+    min-width: 80px;
+}

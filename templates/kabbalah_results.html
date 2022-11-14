@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+
+    <div class='nameCardContainer'>
+    {% for i in range(length) %}
+    <div class='nameCardItem'>
+        <div class='nameCardItemFr'>{{ namePlainText[i] }}</div>
+        <div class='nameCardItemFr'>{{ generalList[i] }}</div>
+    </div>
+    {% endfor%}
+    </div>
+
+    <br>
+
+    <div class='numberCardContainer'>
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Motivation Number:</div>
+            <div class='numberCardItemFrR'> {{ motivationNumber }}</div>
+        </div>
+
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Impression Number:</div>
+            <div class='numberCardItemFrR'> {{ impressionNumber }}</div>
+        </div>
+
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Expression Number:</div>
+            <div class='numberCardItemFrR'>{{ expressionNumber }}</div>
+        </div>
+
+        {% if isbirthdate %}
+            <div class='numberCardItem'>
+                <div class='numberCardItemFrK'>Birth Day:</div>
+                <div class='numberCardItemFrR'> {{ day }}</div>
+            </div>
+
+            <div class='numberCardItem'>
+                <div class='numberCardItemFrK'>Destiny Number:</div>
+                <div class='numberCardItemFrR'> {{ destinyNumber }}</div>
+            </div>
+
+            <div class='numberCardItem'>
+                <div class='numberCardItemFrK'>Mission Number:</div>
+                <div class='numberCardItemFrR'> {{ missionNumber }}</div>
+            </div>
+        {% endif %}
+
+        <div class='listCardItem'>
+            <div class='listCardItemFrK'>Karmic Debts:</div>
+            <div class='listCardItemFrR'>
+            {% for item in karmicDebtsNumbers %}
+            <span>{{ item }} &nbsp;</span>
+            {% endfor %}
+            </div>
+        </div>
+
+        <div class='listCardItem'>
+            <div class='listCardItemFrK'>Karmic Lessons:</div>
+            <div class='listCardItemFrR'>
+            {% for item in karmicLessonsNumbers %}
+            <span>{{ item }} &nbsp;</span>
+            {% endfor %}
+            </div>
+        </div>
+
+        {% if isbirthdate %}
+        <div class='listCardItem'>
+            <div class='listCardItemFrK'>Hidden Tendencies:</div>
+            <div class='listCardItemFrR'>
+            {% for item in hiddenTendenciesNumbers %}
+            <span>{{ item }} &nbsp; </span>
+            {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if isbirthdate %}
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Personal Year:</div>
+            <div class='numberCardItemFrR'> {{ personalYearNumber }}</div>
+        </div>
+        {% endif %}
+
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Subconscious Response:</div>
+            <div class='numberCardItemFrR'> {{ subconsciousResponse }}</div>
+        </div>
+
+        {% if isbirthdate %}
+        <div class='lcCardItem'>
+            <div class='lcCardTitle'>Life Cycles:</div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 1st </div>
+                <div class ='lcCardFrquency'> {{ firstCycle[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ firstCycle[1] }}</span><span>&#10161;</span><span>{{ firstCycle[2] }}</span></div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 2nd </div>
+                <div class ='lcCardFrquency'> {{ secondCycle[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ secondCycle[1] }}</span><span>&#10161;</span><span>{{ secondCycle[2] }}</span></div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 3rd </div>
+                <div class ='lcCardFrquency'> {{ thirdCycle[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ thirdCycle[1] }}</span><span>&#10161;</span><span>&nbsp;{{ thirdCycle[2] }}</span></div>
+            </div>
+        </div>
+
+
+        <div class='lcCardItem'>
+            <div class='lcCardTitle'>Decisive Moments:</div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 1st </div>
+                <div class ='lcCardFrquency'> {{ firstDecisive[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ firstDecisive[1] }}</span><span>&#10161;</span><span>{{ firstDecisive[2] }}</span></div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 2nd </div>
+                <div class ='lcCardFrquency'> {{ secondDecisive[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ secondDecisive[1] }}</span><span>&#10161;</span><span>{{ secondDecisive[2] }}</span></div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 3rd </div>
+                <div class ='lcCardFrquency'> {{ thirdDecisive[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ thirdDecisive[1] }}</span><span>&#10161;</span><span>&nbsp;{{ thirdDecisive[2] }}</span></div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 4th </div>
+                <div class ='lcCardFrquency'> {{ fourthDecisive[0] }} </div>
+                <div class ='lcCardDuration'> <span>{{ fourthDecisive[1] }}</span><span>&#10161;</span><span>&nbsp;{{ fourthDecisive[2] }}</span></div>
+            </div>
+        </div>
+
+
+        <div class='lcCardItem'>
+            <div class='lcCardTitle'>Challenges:</div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 1st </div>
+                <div class ='clCardFrquency'> {{ challengesList[0] }} </div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 2nd </div>
+                <div class ='clCardFrquency'> {{ challengesList[1] }} </div>
+            </div>
+            <div class='lcCardInnerContainer'>
+                <div class ='lcCardIndex'> 3rd </div>
+                <div class ='clCardFrquency'> {{ challengesList[2] }} </div>
+            </div>
+        </div>
+        {% endif %}
+
+
+        <div class='listCardItem'>
+            <div class='listCardItemFrK'>Intervalue Relations:</div>
+            <div class='listCardItemFrR'>
+            {% for item in intervalueList %}
+            <span>{{ item }} &nbsp;</span>
+            {% endfor %}
+            </div>
+        </div>
+
+
+        <div class='listCardItem'>
+            <div class='listCardItemFrK'>Soul State:</div>
+            <div class='listCardItemFrR'>
+            {% for item in soulState %}
+            <span>{{ item }} &nbsp;</span>
+            {% endfor %}
+            </div>
+        </div>
+
+
+        {% if isbirthdate %}
+        <div class='arcaneCardItem'>
+            <div class='arcaneCardTitle'>Arcanes:</div>
+            <div class='arcaneCardInnerContainer'>
+                <div class ='arcaneCardKey'> Quantity </div>
+                <div class ='arcaneCardValue'> {{ arcane['quantity'] }} </div>
+            </div>
+            <div class='arcaneCardInnerContainer'>
+                <div class ='arcaneCardKey'> Duration </div>
+                <div class ='arcaneCardValue'> {{ arcane['duration'] }} </div>
+            </div>
+            <div class='arcaneCardInnerContainer'>
+                <div class ='arcaneCardKey'> Current Influence </div>
+                <div class ='arcaneCardValue'> {{ arcane['influence'] }} </div>
+            </div>
+
+        </div>
+
+
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Current Age:</div>
+            <div class='numberCardItemFrR'> {{ age }}</div>
+        </div>
+        {% endif %}
+
+
+
+
+
+
+
+        <div class='numberCardItem'>
+            <div class='numberCardItemFrK'>Piramid Tip:</div>
+            <div class='numberCardItemFrR'> {{ piramidTip }}</div>
+        </div>
+        <div class='listCardItem'>
+            <div class='listCardItemFrNgK'>Negative Sequences:</div>
+            {% for sequence in negativeSequences %}
+                <div class='listCardItemFrNgR'>
+                {% for item in sequence %}
+
+                {{ item }}
+
+                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <br><br>
+    {% for item in piramid %}
+    <p class='piramidrow'>
+        {% for digit in item %}
+            {{ digit }}
+        {% endfor %}
+    </p>
+    {% endfor %}
+
+{% endblock %}

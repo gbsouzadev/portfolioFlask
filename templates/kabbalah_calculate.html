@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calculate
+{% endblock %}
+
+{% block main %}
+    <form action="/calculate" method="post">
+        <div class="mb-3">
+            <labe> Type in the name:
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="John Doe" type="text" required>
+            </labe>
+        </div>
+        <div class="mb-3">
+            <label> Birthdate for aditional info:
+                <input class="form-control mx-auto w-auto" id="birthdate" name="birthdate" placeholder="birthdate: " type="date">
+            </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+{% endblock %}
