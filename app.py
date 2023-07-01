@@ -350,8 +350,8 @@ def calculo():
         if isbirthdate:
             arcane['quantity'] = length - 1
             arcaneDuration = float(90 / arcane['quantity'])
-            arcane['duration'] = "{:.3f}".format(arcaneDuration)
-            arcane['influence'] = math.ceil(age / arcaneDuration)
+            arcane['duration'] = "{:.4f}".format(arcaneDuration)
+            arcane['influence'] = math.ceil((age * 100) / math.floor(arcaneDuration * 100))
 
 
         # Piramid Building.
